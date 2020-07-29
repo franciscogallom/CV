@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+$color1: #181818;
+$color2: #fff;
+$color3: #cf0;
+$color4: #e1e1e1;
+
+body {
+    background-color: $color4;
+}
+
+.cv-container {
+    background-color: $color2;
+    height: 1024px;
+    width: 768px;
+    display: flex;
+    margin: 10px auto;
+
+    .white-sheet {
+        width: 513px;
+        display: grid;
+        grid-template-rows: 253.5px 93px 531.5px;
+        padding: 0 15px 0 23px;
+
+        .cv-picture .img-profile {
+            height: 200px;
+            width: 200px;
+            clip-path: circle(100px at center);
+            margin: 44px 0 9.5px 0;
+        }
+
+        .cv-introduction {
+            line-height: 1.3;
+
+            .cv-name {
+                font-size: 37px;
+                margin-top: 9.5px;
+            }
+            
+            .cv-studies {
+                font-size: 18px;
+                text-transform: uppercase;
+                opacity: .7;
+            }
+        }
+
+        .cv-info {
+            
+            > div { 
+                margin-top: 25px;
+
+                h3 {
+                    font-size: 18px;
+                }
+
+                p {
+                    font-style: italic;
+                    font-size: 15.275px;
+                }
+            }
+
+            .cv-info-profile {
+                margin-top: 9.5px;
+            }
+
+            .cv-info-entrepreneurship a {
+                color: $color1;
+            }
+        }
+    }
+
+    .black-sheet {
+        width: 255px;
+        background-color: $color1;
+        color: $color2;
+        display: grid;
+        grid-template-rows: 195px 373px 175px 149px;
+
+        div {
+            margin-top: 42px;
+            padding: 0 14px 0 14px;
+
+            h3 {
+                font-size: 18px;
+                font-weight: 500;
+            }
+            
+            h4 {
+                font-style: italic;
+                font-size: 15.275px;
+                font-weight: 400;
+                opacity: .9;
+            }
+
+            .cv-contact-email {
+                font-size: 12px;
+            }
+
+            a {
+                display: block;
+                color: $color2;
+                font-style: italic;
+            }
+
+            .expert-level, .higher-level, .intermediate-level, .lower-level {
+                position: relative;
+                
+                &::before, &::after {
+                    content: '';
+                    height: 8px;
+                    width: 177px;
+                    border-radius: 10px;
+                    position: absolute;
+                    margin-top: 25px;
+                }
+                
+                &::before {
+                    width: 177px;
+                    background-color: $color2;
+                }
+
+                &::after {
+                    background-color: $color3;
+                    width: 50px;
+                    left: 0;
+                }
+            }
+
+            .lower-level::after {
+                width: 71px;
+            }
+
+            .intermediate-level::after {
+                width: 107px;
+            }
+
+            .higher-level::after {
+                width: 133px;
+            }
+
+            .expert-level::after {
+                width: 177px;
+            }
+        }
+
+        .cv-hardskills, .cv-lang {
+            margin-top: 20px;
+            
+            h4 {
+                margin-bottom: 22px;
+            }
+        }
+
+        .cv-softskills {
+            margin-top: 30px;
+        }
+
+        .cv-lang {
+            margin-top: 30px;
+        }
+    }
+}
